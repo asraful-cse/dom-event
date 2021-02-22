@@ -1,0 +1,89 @@
+<!-- 17-10:: how to add element to html using javascript >>> 
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom3getElementByClassName</title>
+
+
+                                                     <!-- /* inernal css code */ -->
+                                <style>
+                                    article{
+                                        border: 2px solid tomato;
+                                        border-radius: 20px;
+                                        margin: 5px;
+                                        padding: 5px;
+                                    }
+                                   
+                                   .special h3{
+
+                                   }
+                                </style>
+
+</head>
+<body>
+    <main>
+        <section>
+            <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+            <article id="first-article">
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi accusantium voluptates cumque quibusdam culpa perspiciatis exercitationem, ipsa qui necessitatibus incidunt cum eius iure sit quaerat autem nisi iusto voluptatem id!</p>
+            </article>
+            <article class="special">       
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Pariatur, excepturi officiis nam quo sunt natus molestias facilis optio eligendi quaerat doloremque enim consequuntur, animi delectus cum consequatur expedita deserunt perferendis quisquam repellat est. Officia itaque optio facilis amet.</p>
+            </article>
+            <article class ="special">
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quo hic sit eligendi nisi ipsam quibusdam molestiae. Dicta quam amet earum reiciendis consequatur eum rem cumque, accusamus, qui laborum deleniti et? Pariatur exercitationem minus eum aspernatur repellat provident laudantium!</p>
+            </article>
+
+
+                                <article>
+                                    <h3>Grocery List</h3>
+                                    <!-- lu>li{ gift item- $}*5 -->
+                                    <lu id = "gift-list">
+                                        <li> gift item- 1</li>
+                                        <li> gift item- 2</li>
+                                        <li> gift item- 3</li>
+                                        <li> gift item- 4</li>
+                                        <li> gift item- 5</li>
+                                    </lu>                 
+                                                        <!--er vetore javaScript diye list add korbo  -->
+                                </article>
+
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+    <script>
+        const article = document.getElementById('first-article');
+        //niche paragraph add korar jonno 3ta kaz korte hobe ::
+        const newParagraph = document.createElement('p');     // new paragraph add korar jonno.
+        newParagraph.innerHTML = 'This is added by javaScript new paragraph';   // new paragraph add korar jonno.
+        article.appendChild(newParagraph);    // appendchid die oi paragraph ke new child hisebe tolar modde  add kora holo.
+
+        //add one more gift item
+        const newList = document.getElementById('gift-list');
+        const newLi = document.createElement('li');
+        newLi.innerHTML = 'new gift item';
+        newList.appendChild(newLi);
+
+    </script>
+</body>
+</html>
+
+<!-- noted:: browser er console a giye document.getElementById('first-article').parentNode kon parent a ase ta dekha jabe 
+and document.getElementById('first-article').childNode ke ase ta ber kora jai  -->

@@ -1,0 +1,27 @@
+<!-- /* 17-6:: capture element html file using getElementById::: 
+    DOM hosse browser jokhon html file purse/wride/ kore tokhon sei html ke javascript er object hisebe ready kore rakhe jate amra future oitake use korar somoi change/modify korte chai tokhon amra sohoje real time a korte pari.*/ -->
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Explore DOM</title>
+    </head>
+    <body>
+        <main>
+            <section>
+                <h1>Exploring DOM</h1>
+                <p>hi javaScript </p>
+                <p id="first">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi, ab.</p> 
+                 <!-- // p> lorem10 peragraph auto word -->
+            </section>
+        </main>
+        <script>
+            var first = document.getElementById('first');                 //specific element ke dorar jonno id ,only ekta element dore kaz kore
+            first.style.color = 'yellow'
+        </script>
+                                                                                        <!-- extarnal o kora jai
+                                                                console a giye kora jai..                          document.getElementById('first').style.color = 'red' -->
+    </body>
+    </html>  

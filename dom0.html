@@ -1,0 +1,38 @@
+/* 17-3 :: create script tag nad connect external Script file */
+// 17-4 :: how javaScript run and why script order is
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            background-color: aquamarine;
+        }
+    </style>
+</head>
+     
+
+
+
+<body>
+    <h1>hello JavaScript :1</h1>
+    <script src="script/first.js"></script>    /* external js link */
+
+    <h1>hello JavaScript :2</h1>
+    <h1>hello JavaScript :3</h1>
+    <h1>hello JavaScript :4</h1>
+    <script src="script/second.js"></script>
+    <h1>hello JavaScript :5</h1>
+    <script>
+        console.log(45);   
+        debugger;
+        console.log(145);   
+        debugger;            // internal javacsript 
+        alert('I am learning java script')
+    
+    </script>
+</body>
+</html>

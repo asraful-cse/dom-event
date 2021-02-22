@@ -1,0 +1,66 @@
+<!-- 17-7:: how to use getElementByClassName -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dom3getElementByClassName</title>
+
+
+                                                     /* inernal css code */
+                                <style>
+                                    article{
+                                        border: 2px solid tomato;
+                                        border-radius: 20px;
+                                        margin: 5px;
+                                        padding: 5px;
+                                    }
+                                   
+                                </style>
+
+</head>
+<body>
+    <main>
+        <section>
+            <!-- article*3>h3{article-$}+p.author{author-$}+p.description>lorem30 -->
+            <article>
+                <h3>article-1</h3>
+                <p class="author">author-1</p>
+                <p class="description">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sequi accusantium voluptates cumque quibusdam culpa perspiciatis exercitationem, ipsa qui necessitatibus incidunt cum eius iure sit quaerat autem nisi iusto voluptatem id!</p>
+            </article>
+            <article>
+                <h3>article-2</h3>
+                <p class="author">author-2</p>
+                <p class="description">Pariatur, excepturi officiis nam quo sunt natus molestias facilis optio eligendi quaerat doloremque enim consequuntur, animi delectus cum consequatur expedita deserunt perferendis quisquam repellat est. Officia itaque optio facilis amet.</p>
+            </article>
+            <article>
+                <h3>article-3</h3>
+                <p class="author">author-3</p>
+                <p class="description">Quo hic sit eligendi nisi ipsam quibusdam molestiae. Dicta quam amet earum reiciendis consequatur eum rem cumque, accusamus, qui laborum deleniti et? Pariatur exercitationem minus eum aspernatur repellat provident laudantium!</p>
+            </article>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+    <script>
+        var authors = document.getElementsByClassName('author');
+       for (let i = 0; i < authors.length; i++) {
+           const element = authors[i];
+           console.log(element.innerHTML);      // console a html er class name author 3tai show korbe.
+           element.innerHTML = 'sunny-' +(i+1);   // author name take change korar jonno ..
+
+           element.style.backgroundColor = 'lightblue';
+           element.style.margin = '10px';
+           element.style.fontSize = '30px';
+           
+       }
+    </script>
+</body>
+</html>
